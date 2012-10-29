@@ -4,6 +4,9 @@ cv-js
 System to build static HTML CVs using JSON user data in HTML templates with a sprinkling of 
 Markdown.
 
+Example output: http://adam-h.github.com/cv-js/example.html
+Example config: user_data/skills.md
+
 Requirements and Installation
 =============================
 
