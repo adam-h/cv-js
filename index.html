@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cv-js by adam-h</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Cv-js</h1>
+        <p>System to build static HTML CVs using JSON user data in HTML templates with a sprinkling of Markdown.</p>
+
+        <p class="view"><a href="https://github.com/adam-h/cv-js">View the Project on GitHub <small>adam-h/cv-js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/adam-h/cv-js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/adam-h/cv-js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/adam-h/cv-js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>cv-js</h1>
+
+<p>System to build static HTML CVs using JSON user data in HTML templates with a sprinkling of 
+Markdown.</p>
+
+<h1>Requirements and Installation</h1>
+
+<ul>
+<li>
+<a href="http://nodejs.org/">Node.js</a> 0.8+ (may work on earlier versions)</li>
+<li><a href="https://npmjs.org/">NPM</a></li>
+</ul><p>A few node packages are required, they can be installed by running the following:</p>
+
+<pre><code>npm install optimist handlebars markdown node-static
+</code></pre>
+
+<h1>Building CV</h1>
+
+<p>The static HTML output can be generated using:</p>
+
+<pre><code>node cv.js
+</code></pre>
+
+<p>This will build the <code>index.html</code> file and copy over any template assets to the output directory`.</p>
+
+<p>Options:</p>
+
+<ul>
+<li>
+<code>-o</code>, <code>--output_dir</code>  Directory to output the built files to <em>[default: "dist"]</em>
+</li>
+<li>
+<code>-t</code>, <code>--template</code>    Template to use (in templates/ dir) <em>[default: "basic"]</em>
+</li>
+<li>
+<code>-d</code>, <code>--data_dir</code>    Directory containing person.json and optional markdown files <em>[default: "user_data"]</em>
+</li>
+<li>
+<code>-s</code>, <code>--serve</code>       Run a test server on port 8080 <em>[boolean]</em>
+</li>
+</ul><h2>Testing</h2>
+
+<p>A simple HTTP server to test with is included, which can be run using:</p>
+
+<pre><code>node cv.js --serve
+</code></pre>
+
+<p>Which will start a server on port 8080 serving from the default paths. The paths can be changed 
+using the above options.</p>
+
+<h1>Configuring</h1>
+
+<p>Edit the main <code>person.json</code> file in the <code>user_data</code> directory with your details.</p>
+
+<p>Any <code>blurb</code> fields are processed as <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> 
+for formatting, and can optionally be loaded from a separate file in the same directory as 
+<code>person.json</code>.If a seoparate file is to be used, the <code>blurb</code> string should be replaced with a 
+JSON object with a <code>file</code> property with the filename as its value, e.g.:</p>
+
+<pre><code>"blurb": { "file": "skills.md" }
+</code></pre>
+
+<h1>Templating</h1>
+
+<p>Templates should be placed in their own folder in <code>templates</code>. A file named 
+<code>TEMPLATENAME.handlebars</code> must be present as this is the main HTML template used.</p>
+
+<p>Any other files in this directory will be copied over to the output directory as-is.</p>
+
+<p>As an example, the <code>basic</code> template is at <code>templates/basic/basic.handlebars</code> and includes an 
+external CSS file called <code>basic.css</code> (but this could be named anything).</p>
+
+<p>The system includes a HTML5 doctype and utf-8 meta-tag at the top of the output, anything else 
+is provided by the template.</p>
+
+<p>See <a href="http://handlebarsjs.com/">handlebarsjs.com</a> for formatting details.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/adam-h">adam-h</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-35937331-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
