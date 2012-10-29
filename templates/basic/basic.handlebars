@@ -1,4 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width; initial-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:700' rel='stylesheet' type='text/css'>
 <link href='basic.css' rel='stylesheet' type='text/css'>
 <!--[if lte IE 8]>
@@ -55,14 +55,14 @@
 	<section class="skills">
 		<h1>Skills</h1>
 		{{#if skills.primary}}
-			<ul class="primary">
+			<ul class="tags primary">
 			{{#each skills.primary}}
 				<li>{{this}}
 			{{/each}}
 			</ul>
 		{{/if}}
 		{{#if skills.secondary}}
-			<ul class="secondary">
+			<ul class="tags secondary">
 			{{#each skills.secondary}}
 				<li>{{this}}
 			{{/each}}

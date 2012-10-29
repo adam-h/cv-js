@@ -11,6 +11,10 @@
 	*zoom: 1;
 }
 
+html, body {
+	margin:0;
+	padding:0;
+}
 body {
 	font-family: 'Droid Sans', sans-serif;
 	font-size: 16px;
@@ -32,7 +36,9 @@ h2 {
 .container {
 	background-color: white;
 	padding: 10px;
-	min-width: 320px;max-width: 900px;  margin: 0 auto;
+	min-width: 320px;
+	max-width: 900px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 
@@ -49,7 +55,6 @@ h2 {
 }
 
 section {
-	min-width:310px;
 	padding: 10px 0;
 }
 section h1 {
@@ -58,6 +63,7 @@ section h1 {
 
 .intro p {
 	margin-bottom: 0px;
+	text-align: justify;
 }
 
 .work, .edu, .links, .highlights {
@@ -74,20 +80,20 @@ section h1 {
 	width:100%;
 }
 
-.skills ul {
+ul.tags {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 }
-.skills li {
+.tags li {
 	display: inline-block;
 	padding: 2px 10px;
 	background-color: #FFD961;
 	margin: 5px 5px;
 	border-radius: 10px;
 }
-.skills .secondary li {
+.tags.secondary li {
 	 background-color: #FFE696;
 }
 .skills .blurb p {
@@ -136,24 +142,29 @@ section h1 {
 	}*/
 	a {
 		text-decoration: none;
+		color: black;
+	}
+
+	section {
+		padding: 0;
 	}
 
 	.highlights {
 		max-width: none;
 	}
 
-	.highlights ul {
+	.highlights ul, .skills .blurb ul {
 		list-style: circle;
 		padding-left: 2em;
 	}
 	.links {
 		display: none;
 	}
-	.skills li {
+	.tags li {
 		display: inline-block;
-		padding: 2px 5px;
+		padding: 0px 5px;
 		background-color: #FFD961;
-		margin: 5px 5px;
+		margin: 0px 5px;
 		border-radius: 10px;
 	}
 }
