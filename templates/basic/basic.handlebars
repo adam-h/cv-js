@@ -1,0 +1,97 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:700' rel='stylesheet' type='text/css'>
+<link href='basic.css' rel='stylesheet' type='text/css'>
+<!--[if lte IE 8]>
+	<div style="position:fixed;width:100%;background:#FF9E9E;top:0;left:0;text-align:center;line-height:30px;">
+		Your browser is <strong>out of date</strong>. It will not display all features of this and other websites. <a href="http://www.browser-update.org/update.html">Learn how to update your browser</a>
+	</div>
+<![endif]-->
+<div class="container">
+
+	<header class="masthead">
+		<h1>{{personal.name}}</h1>
+		<div class="sub_header">
+			<span class="email">{{personal.email}}</span>
+			<span class="location">{{personal.location}}</span>
+		</div>
+	</header>
+
+	{{#if intro}}
+	<section class="intro">
+		{{markdown intro}}
+	</section>
+	{{/if}}
+
+	<div class="clearfix">
+	<section class="work item_list">
+		<h1>Employment</h1>
+		{{#each jobs}}
+			<div class="item">
+				<div class="when">{{this.when}}</div>
+				<div class="what">{{this.what}}</div>
+				<div class="where">{{this.where}}</div>
+				{{#if this.blurb}}
+					<div class="blurb">{{markdown this.blurb}}</div>
+				{{/if}}
+			</div>
+		{{/each}}
+	</section>
+
+	<section class="edu item_list">
+		<h1>Education</h1>
+		{{#each education}}
+			<div class="item">
+				<div class="when">{{this.when}}</div>
+				<div class="what">{{this.what}}</div>
+				<div class="where">{{this.where}}</div>
+				{{#if this.blurb}}
+					<div class="blurb">{{markdown this.blurb}}</div>
+				{{/if}}
+			</div>
+		{{/each}}
+	</section>
+	</div>
+
+	<section class="skills">
+		<h1>Skills</h1>
+		{{#if skills.primary}}
+			<ul class="primary">
+			{{#each skills.primary}}
+				<li>{{this}}
+			{{/each}}
+			</ul>
+		{{/if}}
+		{{#if skills.secondary}}
+			<ul class="secondary">
+			{{#each skills.secondary}}
+				<li>{{this}}
+			{{/each}}
+			</ul>
+		{{/if}}
+		{{#if skills.blurb}}
+			<div class="blurb">{{markdown skills.blurb}}</div>
+		{{/if}}
+	</section>
+
+	{{#if highlights}}
+	<section class="highlights">
+		<h1>Highlights</h1>
+		<ul>
+		{{#each highlights}}
+			<li>{{#if this.url}}<a href="{{this.url}}" target="_blank">{{/if}}{{this.title}}{{#if this.url}}</a>{{/if}}
+		{{/each}}
+		</ul>
+	</section>
+	{{/if}}
+
+	{{#if links}}
+	<section class="links">
+		<h1>Links</h1>
+		<ul>
+		{{#each links}}
+			<li><a href="{{this.url}}" target="_blank">{{this.title}}</a>
+		{{/each}}
+		</ul>
+	</section>
+	{{/if}}
+</div>

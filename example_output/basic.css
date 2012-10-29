@@ -1,0 +1,159 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+body {
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 16px;
+	line-height:1.5em;
+	background-color: rgb(187, 187, 187);
+}
+h1, h2, h3, h4 {
+	font-family: 'Droid Serif', serif;
+	color: #DB7A4C;
+	margin: 0.6em 0;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.4em;
+}
+
+.container {
+	background-color: white;
+	padding: 10px;
+	min-width: 320px;max-width: 900px;  margin: 0 auto;
+	overflow: hidden;
+}
+
+.masthead {
+	text-align:center;
+}
+.masthead h1 {
+	font-size: 2.5em;
+	margin-bottom: 0.2em;
+}
+.sub_header span {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+section {
+	min-width:310px;
+	padding: 10px 0;
+}
+section h1 {
+	font-size: 2em;
+}
+
+.intro p {
+	margin-bottom: 0px;
+}
+
+.work, .edu, .links, .highlights {
+	max-width: 48%;
+	float:left;
+}
+
+.edu, .links {
+	text-align: right;
+	float: right;
+}
+
+.skills {
+	width:100%;
+}
+
+.skills ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.skills li {
+	display: inline-block;
+	padding: 2px 10px;
+	background-color: #FFD961;
+	margin: 5px 5px;
+	border-radius: 10px;
+}
+.skills .secondary li {
+	 background-color: #FFE696;
+}
+.skills .blurb p {
+	text-align: left;
+}
+
+.item{
+	margin-bottom: 25px;
+	min-height: 12em;
+}
+
+.item:last-child {
+	margin-bottom: 0;
+	min-height: 0;
+}
+
+.when {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+}
+
+.blurb p {
+	margin: 0.5em 0;
+	text-align: justify;
+}
+
+.links ul, .highlights ul {
+	list-style: none;
+	padding: 0;
+}
+.links ul li, .highlights ul li {
+	padding: 0 0 5px;
+}
+
+@media only screen and (max-width: 650px) {
+	.work, .edu, .links, .highlights {
+		max-width: 100%;
+		text-align: left;
+		float: left;
+	}
+}
+
+@media print {
+	/*a:link:after, a:visited:after {
+		content: " - " attr(href);
+	}*/
+	a {
+		text-decoration: none;
+	}
+
+	.highlights {
+		max-width: none;
+	}
+
+	.highlights ul {
+		list-style: circle;
+		padding-left: 2em;
+	}
+	.links {
+		display: none;
+	}
+	.skills li {
+		display: inline-block;
+		padding: 2px 5px;
+		background-color: #FFD961;
+		margin: 5px 5px;
+		border-radius: 10px;
+	}
+}

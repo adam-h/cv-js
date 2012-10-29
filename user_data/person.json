@@ -1,0 +1,52 @@
+{
+	"personal": {
+		"name": "John Smith",
+		"phone": "(+44) 012 3456 789",
+		"email": "jsmith@example.com",
+		"location": "Delight, UK"
+	},
+	"intro": { "file": "intro.md" },
+	"links": [
+		{ "title": "Personal Blog", "url": "http://blog.example.com" },
+		{ "title": "LinkedIn", "url": "http://linkedin.example.com" },
+		{ "title": "Professional Site", "url": "http://pro.example.com" }
+	],
+	"jobs": [
+		{
+			"when": "2011 …",
+			"what": "Chief Enlightener",
+			"where": "Happy Co. Ltd.",
+			"blurb": "In charge of enlightening the staff and running off-site getaways for our top clients. Maecenas ac ligula sit amet est fringilla sollicitudin nec eget elit."
+		},
+		{
+			"when": "2009 - 2011",
+			"what": "Junior Enlightener",
+			"where": "Happy Co. Ltd.",
+			"blurb": "Morbi vitae tempor tortor. In et dui a urna accumsan fermentum. Integer libero nisl, ultricies et rhoncus nec, tincidunt vel odio. Nulla facilisi."
+		}
+	],
+	"education": [
+		{
+			"when": "2006 - 2009",
+			"what": "2:1 in Happiness (BA)",
+			"where": "University of Smiles, UK",
+			"blurb": "Dissertation on circus acts involving baloons. Nulla et sem a mauris posuere elementum."
+		},
+		{
+			"when": "2002 - 2006",
+			"what": "A Levels",
+			"where": "Cheery College, UK",
+			"blurb": "Studied Funny Bones, Belly Laughs and Cheering Up whilst perfecting my chuckle"
+		}
+	],
+	"skills": {
+		"primary": [ "Happiness", "Blissfulness", "Optimism" ],
+		"secondary": [ "Merriment", "Euphoria", "Glee", "Hilarity", "Laughter", "Sanctity" ],
+		"blurb": { "file": "skills.md" }
+	},
+	"highlights": [
+		{ "title": "Made Voldemort Smile", "url": "http://news.example.com/john-smith-makes-voldemort-smile" },
+		{ "title": "Hosted a tea party with the Batman and the Joker" },
+		{ "title": "Doubled the happiness of the Martians" }
+	]
+}
