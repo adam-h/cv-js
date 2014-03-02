@@ -1,0 +1,36 @@
+{
+  "name": "cv-js",
+  "version": "0.0.0",
+  "description": "cv-js =====",
+  "main": "cv.js",
+  "dependencies": {
+    "gulp": "~3.5.5",
+    "gulp-sass": "~0.7.1",
+    "optimist": "~0.6.1",
+    "gulp-rename": "~1.1.0",
+    "handlebars": "~2.0.0-alpha.1",
+    "map-stream": "~0.1.0",
+    "gulp-util": "~2.2.14",
+    "markdown": "~0.5.0",
+    "node-static": "~0.7.3",
+    "gulp-livereload": "~1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adam-h/cv-js.git"
+  },
+  "keywords": [
+    "cv",
+    "handlebars"
+  ],
+  "author": "Adam heath",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/adam-h/cv-js/issues"
+  },
+  "homepage": "https://github.com/adam-h/cv-js"
+}
