@@ -1,3 +1,5 @@
+$accent: #DB7A4C;
+
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before,
 .clearfix:after {
@@ -15,22 +17,44 @@ html, body {
 	margin:0;
 	padding:0;
 }
+
 body {
 	font-family: 'Droid Sans', sans-serif;
 	font-size: 16px;
 	line-height:1.5em;
 	background-color: rgb(187, 187, 187);
 }
+
 h1, h2, h3, h4 {
 	font-family: 'Droid Serif', serif;
-	color: #DB7A4C;
+	color: $accent;
 	margin: 0.6em 0;
 }
+
 h1 {
 	font-size: 2em;
 }
+
 h2 {
 	font-size: 1.4em;
+}
+
+a {
+	color: complement($accent); /*#428bca;*/
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	@media print {
+		color: black;
+	}
+}
+
+ul {
+	margin: 0.6em 0;
+	padding-left: 2em;
 }
 
 .container {
@@ -44,11 +68,13 @@ h2 {
 
 .masthead {
 	text-align:center;
+
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 0.2em;
+	}
 }
-.masthead h1 {
-	font-size: 2.5em;
-	margin-bottom: 0.2em;
-}
+
 .sub_header span {
 	display: inline-block;
 	padding: 0 20px;
@@ -56,9 +82,14 @@ h2 {
 
 section {
 	padding: 10px 0;
-}
-section h1 {
-	font-size: 2em;
+
+	h1 {
+		font-size: 2em;
+	}
+
+	@media print {
+		padding: 0;
+	}
 }
 
 .intro p {
@@ -69,6 +100,12 @@ section h1 {
 .work, .edu, .links, .highlights {
 	max-width: 48%;
 	float:left;
+
+	@media only screen and (max-width: 650px) {
+		max-width: 100%;
+		text-align: left;
+		float: left;
+	}
 }
 
 .edu, .links {
@@ -80,34 +117,48 @@ section h1 {
 	width:100%;
 }
 
-ul.tags {
+.tags {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
+
+
+
+	li {
+		display: inline-block;
+		padding: 2px 10px;
+		background-color: lighten(saturate(adjust-hue($accent, 20deg), 80%), 10%);
+		margin: 5px 5px;
+		border-radius: 10px;
+
+		@media print {
+			padding: 0px 5px;
+			margin: 0px 5px;
+		}
+	}
+
+	&.secondary li {
+		background-color: lighten(saturate(adjust-hue($accent, 20deg), 80%), 25%);
+	}
+
+	@media print {
+		list-style: circle;
+	}
 }
-.tags li {
-	display: inline-block;
-	padding: 2px 10px;
-	background-color: #FFD961;
-	margin: 5px 5px;
-	border-radius: 10px;
-}
-.tags.secondary li {
-	 background-color: #FFE696;
-}
+
 .skills .blurb p {
 	text-align: left;
 }
 
-.item{
+.item {
 	margin-bottom: 25px;
-	min-height: 12em;
-}
+	min-height: 15em;
 
-.item:last-child {
-	margin-bottom: 0;
-	min-height: 0;
+	&:last-child {
+		margin-bottom: 0;
+		min-height: 0;
+	}
 }
 
 .when {
@@ -120,51 +171,27 @@ ul.tags {
 	text-align: justify;
 }
 
-.links ul, .highlights ul {
-	list-style: none;
-	padding: 0;
+.blurb h2 {
+	margin: 0.8em 0 0;
+}
+
+.links {
+	ul {
+		list-style: none;
+		padding: 0;
+
+		@media print {
+			list-style: circle;
+
+			a:link:after, a:visited:after {
+				content: " - " attr(href);
+			}
+		}
+	}
+}
+.highlights ul {
+	text-align: justify;
 }
 .links ul li, .highlights ul li {
 	padding: 0 0 5px;
-}
-
-@media only screen and (max-width: 650px) {
-	.work, .edu, .links, .highlights {
-		max-width: 100%;
-		text-align: left;
-		float: left;
-	}
-}
-
-@media print {
-	/*a:link:after, a:visited:after {
-		content: " - " attr(href);
-	}*/
-	a {
-		text-decoration: none;
-		color: black;
-	}
-
-	section {
-		padding: 0;
-	}
-
-	.highlights {
-		max-width: none;
-	}
-
-	.highlights ul, .skills .blurb ul {
-		list-style: circle;
-		padding-left: 2em;
-	}
-	.links {
-		display: none;
-	}
-	.tags li {
-		display: inline-block;
-		padding: 0px 5px;
-		background-color: #FFD961;
-		margin: 0px 5px;
-		border-radius: 10px;
-	}
 }
