@@ -46,10 +46,6 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
-
-	@media print {
-		color: black;
-	}
 }
 
 ul {
@@ -81,10 +77,10 @@ ul {
 }
 
 section {
-	padding: 10px 0;
+	padding: 5px 0;
 
 	h1 {
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 
 	@media print {
@@ -153,7 +149,7 @@ section {
 
 .item {
 	margin-bottom: 25px;
-	min-height: 15em;
+	min-height: 13em;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -173,6 +169,7 @@ section {
 
 .blurb h2 {
 	margin: 0.8em 0 0;
+	font-size: 1.2em
 }
 
 .links {
@@ -181,8 +178,6 @@ section {
 		padding: 0;
 
 		@media print {
-			list-style: circle;
-
 			a:link:after, a:visited:after {
 				content: " - " attr(href);
 			}
